@@ -18,7 +18,7 @@ namespace PostManager
         private void AwaitForACommand()
         {
             Console.WriteLine("");
-            Console.WriteLine("Would you like to [list] the posts, [select] a post, or [exit]?");
+            Console.WriteLine("Would you like to [list] the posts, [create] a post, or [exit]?");
             string command = Console.ReadLine();
             ActUponACommand(command);
         }
@@ -31,14 +31,19 @@ namespace PostManager
                     ViewPosts();
                     break;
 
-                case "select":
-                    SelectPost();
+                case "create":
+                    CreatePost();
                     break;
 
                 case "exit":
                     Exit();
                     break;
+
+                default:
+                    Console.WriteLine("Choose an option: select, list or exit.");
+                    break;
             }
+            AwaitForACommand();
         }
 
         public void ViewPosts()
@@ -48,18 +53,43 @@ namespace PostManager
 
             foreach (Post i in listOfPosts)
             {
-                Console.WriteLine(i);
+                Console.WriteLine("Title: "+i.title);
+                Console.WriteLine("Description: "+i.description);
+                Console.WriteLine("Votes: "+i.votes);
                 Console.WriteLine("************");
+                Console.WriteLine("");
             }
 
             AwaitForACommand();
         }
-
-        public void SelectPost()
+        
+        public void CreatePost()
         {
-            Console.WriteLine("Viewing an individual post");
+            Console.WriteLine("What name should the post have?");
+            Console.WriteLine("");
+            string title = Console.ReadLine();
+
+            Console.WriteLine("What description should the post have?");
+            Console.WriteLine("");
+            string description = Console.ReadLine();
+            Post newPost = new Post(title, description);
+            listOfPosts.Add(newPost);
+
+            Console.WriteLine("");
+            Console.WriteLine("Title: " + newPost.title);
+            Console.WriteLine("Description: " + newPost.description);
+            Console.WriteLine("Votes: " + newPost.votes);
+            Console.WriteLine("************");
+            Console.WriteLine("");
+
             AwaitForACommand();
         }
+
+        //public void SelectPost()
+        //{
+        //    Console.WriteLine("Viewing an individual post");
+        //    AwaitForACommand();
+        //}
 
         public void Exit()
         {

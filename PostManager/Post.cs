@@ -3,9 +3,9 @@ namespace PostManager
 {
 	public class Post
 	{
-		private string title;
-		private string description;
-		private int votes;
+		public string title;
+		public string description;
+		public int votes;
 
 		public void upvote()
 		{
@@ -17,31 +17,13 @@ namespace PostManager
 			votes = votes--;
 		}
 
-		//public Post createPost(string title, string description)
-		//{
-		//}
-
-		public Post(string title, string description)
+		public Post(string title2, string description2)
 		{
-			title = title;
-			description = description;
+			title = title2;
+			description = description2;
 			votes = 0;
 		}
 
-		//public Post()
-		//{
-		//	if (post == null)
-		//	{
-		//		Console.WriteLine("You need to send a title and a description for the post");
-		//	} else
-		//	{
-		//		Console.WriteLine(title);
-		//		Console.WriteLine("");
-		//		Console.WriteLine(description);
-		//		Console.WriteLine("");
-		//		Console.WriteLine("Vote count:" + votes);
-		//	}
-		//}
 	}
 
 }
