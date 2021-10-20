@@ -17,10 +17,10 @@ namespace PostManager
 			votes = votes - 1;
 		}
 
-		public Post(string title2, string description2)
+		public Post(string responseForTitle, string responseForDescription)
 		{
-			title = title2;
-			description = description2;
+			title = responseForTitle;
+			description = responseForDescription;
 			votes = 0;
 		}
 
