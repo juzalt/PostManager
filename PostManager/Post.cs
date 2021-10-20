@@ -1,51 +1,47 @@
 ﻿using System;
-
-public class Post
+namespace PostManager
 {
-	private string title;
-	private string description;
-	private int votes;
-	private Post post;
-
-	public void upvote()
+	public class Post
 	{
-		post.votes = post.votes++;
-	}
+		private string title;
+		private string description;
+		private int votes;
 
-	public void downvote()
-	{
-		post.votes = post.votes--;
-	}
-
-	public Post createPost(string title, string description)
-	{
-		post = new Post(title, description);
-		post.title = title;
-		post.description = description;
-		post.votes = 0;
-		return post;
-	}
-
-	public Post(string title, string description)
-	{
-		if (post == null)
+		public void upvote()
 		{
-			post = createPost(title, description);
+			votes = votes++;
 		}
+
+		public void downvote()
+		{
+			votes = votes--;
+		}
+
+		//public Post createPost(string title, string description)
+		//{
+		//}
+
+		public Post(string title, string description)
+		{
+			title = title;
+			description = description;
+			votes = 0;
+		}
+
+		//public Post()
+		//{
+		//	if (post == null)
+		//	{
+		//		Console.WriteLine("You need to send a title and a description for the post");
+		//	} else
+		//	{
+		//		Console.WriteLine(title);
+		//		Console.WriteLine("");
+		//		Console.WriteLine(description);
+		//		Console.WriteLine("");
+		//		Console.WriteLine("Vote count:" + votes);
+		//	}
+		//}
 	}
 
-	public Post()
-	{
-		if (post == null)
-		{
-			Console.WriteLine("You need to send a title and a description for the post");
-		} else
-		{
-			Console.WriteLine(title);
-			Console.WriteLine("");
-			Console.WriteLine(description);
-			Console.WriteLine("");
-			Console.WriteLine("Vote count:" + votes);
-		}
-	}
 }
