@@ -1,15 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PostManager
 {
     class Program
     {
         private Program postManager;
-        private object[] listOfPosts;
+        private List<Post> listOfPosts;
 
         public void ViewPosts()
         {
             Console.WriteLine("Viewing Posts");
+            Console.WriteLine("");
+
+            foreach (Post i in listOfPosts)
+            {
+                Console.WriteLine(i);
+                Console.WriteLine("************");
+            }
+
             postManager.AwaitForACommand();
         }
 
@@ -61,6 +70,8 @@ namespace PostManager
         {
             Program instanceOfProgram = new Program();
             instanceOfProgram.postManager = instanceOfProgram;
+
+            instanceOfProgram.postManager.listOfPosts.Add(new Post("First Post", "First post's description"));
 
             instanceOfProgram.postManager.GiveIntroduction();
         }
