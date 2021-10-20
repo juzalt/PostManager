@@ -18,7 +18,7 @@ namespace PostManager
         private void AwaitForACommand()
         {
             Console.WriteLine("");
-            Console.WriteLine("Would you like to [list] the posts, [create] a post, or [exit]?");
+            Console.WriteLine("Would you like to [list] the posts, [create] a post, [select] a post, or [exit]?");
             string command = Console.ReadLine();
             ActUponACommand(command);
         }
@@ -35,12 +35,16 @@ namespace PostManager
                     CreatePost();
                     break;
 
+                case "select":
+                    SelectAPost();
+                    break;
+
                 case "exit":
                     Exit();
                     break;
 
                 default:
-                    Console.WriteLine("Choose an option: select, list or exit.");
+                    Console.WriteLine("Choose an option: select, list, create or exit.");
                     break;
             }
             AwaitForACommand();
@@ -85,11 +89,39 @@ namespace PostManager
             AwaitForACommand();
         }
 
-        //public void SelectPost()
-        //{
-        //    Console.WriteLine("Viewing an individual post");
-        //    AwaitForACommand();
-        //}
+        public void SelectAPost()
+        {
+            Console.WriteLine("What's the name of the post");
+            string name = Console.ReadLine();
+            Post post = listOfPosts.Find(x => x.title == name);
+
+            Console.WriteLine("");
+            Console.WriteLine("Title: " + post.title);
+            Console.WriteLine("Description: " + post.description);
+            Console.WriteLine("Votes: " + post.votes);
+            Console.WriteLine("************");
+            Console.WriteLine("");
+
+            Console.WriteLine("Do you wish to [upvote] it, [downvote] it or [exit] to the main menu?");
+
+            
+            switch (Console.ReadLine())
+            {
+                case "upvote":
+                    post.upvote();
+                    Console.WriteLine("Votes: " + post.votes);
+                    break;
+                case "downvote":
+                    post.downvote();
+                    break;
+                case "exit":
+                    break;
+                default:
+                    break;
+            }
+
+            AwaitForACommand();
+        }
 
         public void Exit()
         {

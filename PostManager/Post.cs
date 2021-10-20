@@ -9,12 +9,12 @@ namespace PostManager
 
 		public void upvote()
 		{
-			votes = votes++;
+			votes = votes + 1;
 		}
 
 		public void downvote()
 		{
-			votes = votes--;
+			votes = votes - 1;
 		}
 
 		public Post(string title2, string description2)
