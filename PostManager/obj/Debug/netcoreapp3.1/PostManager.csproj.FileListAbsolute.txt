@@ -1,0 +1,13 @@
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\bin\Debug\netcoreapp3.1\PostManager.exe
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\bin\Debug\netcoreapp3.1\PostManager.deps.json
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\bin\Debug\netcoreapp3.1\PostManager.runtimeconfig.json
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\bin\Debug\netcoreapp3.1\PostManager.runtimeconfig.dev.json
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\bin\Debug\netcoreapp3.1\PostManager.dll
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\bin\Debug\netcoreapp3.1\PostManager.pdb
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\obj\Debug\netcoreapp3.1\PostManager.csprojAssemblyReference.cache
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\obj\Debug\netcoreapp3.1\PostManager.AssemblyInfoInputs.cache
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\obj\Debug\netcoreapp3.1\PostManager.AssemblyInfo.cs
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\obj\Debug\netcoreapp3.1\PostManager.csproj.CoreCompileInputs.cache
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\obj\Debug\netcoreapp3.1\PostManager.dll
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\obj\Debug\netcoreapp3.1\PostManager.pdb
+C:\Users\julian.zaltron\source\repos\PostManager\PostManager\obj\Debug\netcoreapp3.1\PostManager.genruntimeconfig.cache
